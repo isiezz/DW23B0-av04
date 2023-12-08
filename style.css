@@ -19,6 +19,9 @@
     --Buff: #D69F7E;
     --Bole: #774936;
     --Black-Bean: #3C0000;
+    --Coral-Tree: #A87673;
+    --Big-Stone: #1A2D40;
+    --White-Linen: #F6EEE3;
     --White-Smoke: #F2F2F2;
 }
 
@@ -32,7 +35,29 @@ html {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+    font-weight: 400;
+    font-style: normal;
     line-height: normal;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue';
+}
+
+h1 {
+    color: var(--Black-Bean);
+    font-size: 4rem;
+    margin: 1.5rem 0;
+}
+
+h2 {
+    color: var(--Big-Stone);
+    font-size: 2rem;
+}
+
+h3 {
+    color: var(--Coral-Tree);
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 1rem 2rem;
 }
 
 p, a, li, button, ul {
@@ -40,6 +65,20 @@ p, a, li, button, ul {
     padding: 0;
     line-height: normal;
     text-decoration: none;
+}
+
+p, li {
+    color: #4b4b4b;
+    font-size: 1.2rem;
+    font-style: normal;
+    margin: 1.2rem;
+    text-indent: 1.5rem;
+    line-height: 1.5rem;
+}
+
+li {
+    margin-left: 2rem;
+    text-indent: 0;
 }
 
 a:hover {
@@ -74,6 +113,7 @@ p.success {
 p.danger {
     color: red;
 }
+
 
 /* - - - - - NAVBAR - - - - - */
 
@@ -124,6 +164,81 @@ p.danger {
     transition: .5s;
 }
 
+
+/* - - - - - BANNER - - - - - */
+
+banner {
+    display: flex;
+    justify-content: center;
+    height: 55vh;
+    padding-top: 3rem;
+    background: linear-gradient(180deg, rgba(60,0,0,1) 30%, rgba(255,255,255,1) 90%);
+}
+
+banner img {
+    width: auto;
+    height: 50vh;
+}
+
+
+/* - - - - - PAGES - - - - -  */
+
+.saiba-mais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--Coral-Tree);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--Bole);
+}
+
+.alunos, .professores {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.alunos img {
+    margin-left: -1rem;
+    width: 90vw;
+}
+
+.professores img {
+    width: 80%;
+}
+
+#personagens {
+    background-color: var(--White-Linen);
+    box-shadow: 
+    inset 0px 15px 20px -10px var(--Pale-Dogwood),
+    inset 0px -15px 20px -10px var(--Pale-Dogwood); 
+}
+
+.personagem {
+    display: flex;
+    justify-content: center;
+}
+
+.personagem img {
+    width: 80vw;
+}
+
+
+
 @media (min-width: 600px) {
     .menu-toggle {
         display: none;
@@ -150,19 +265,34 @@ p.danger {
     .menu-toggle {
         display: none;
     }
-}
 
-/* - - - - - PAGES - - - - -  */
+    #instituicao {
+        height: auto;
+    }
 
-h1, h2 {
-    font-family: 'Bebas Neue';
-}
+    /* #disciplinas, #livro, #personagens, #alunos {
+        height: 100vh;
+    } */
 
-#instituicao, #disciplinas, #livro, #personagens, #alunos {
-    height: 100vh;
+    #instituicao, #disciplinas, #livro, #alunos {
+        padding: 0 5rem;
+    }
 
-}
+    #personagens {
+        padding: 1rem 5rem 0 5rem;
+    }
 
-#instituicao {
-    padding-top: 3rem;
+    .personagem img {
+        height: 40vh;
+        width: auto;
+    }
+
+    .alunos img {
+        margin-left: -8rem;
+        width: 80vw;
+    }
+
+    .professores img {
+        width: 50%;
+    }
 }
