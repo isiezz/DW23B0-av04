@@ -1,8 +1,10 @@
 @font-face {
     font-family: 'Bebas Neue';
-    src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+    src: url('BebasNeue-Regular.ttf');
     font-weight: 400;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 
 /* - - - - - GLOBALS - - - - - */
 
@@ -170,6 +172,7 @@ p.danger {
 banner {
     display: flex;
     justify-content: center;
+    width: 100vw;
     height: 55vh;
     padding-top: 3rem;
     background: linear-gradient(180deg, rgba(60,0,0,1) 30%, rgba(255,255,255,1) 90%);
@@ -221,11 +224,21 @@ banner img {
     width: 80%;
 }
 
+#livro {
+    background-color: color-mix(in oklch, transparent, var(--Big-Stone) 20%);
+    box-shadow: 
+    inset 0px 8px 20px -10px var(--Big-Stone),
+    inset 0px -8px 20px -10px var(--Big-Stone);
+    padding: 1rem 0;
+}
+
+
 #personagens {
     background-color: var(--White-Linen);
     box-shadow: 
     inset 0px 15px 20px -10px var(--Pale-Dogwood),
     inset 0px -15px 20px -10px var(--Pale-Dogwood); 
+    padding: 1rem 0 0 0;
 }
 
 .personagem {
@@ -280,6 +293,10 @@ banner img {
 
     #personagens {
         padding: 1rem 5rem 0 5rem;
+    }
+
+    #livro {
+        padding: 1rem 5rem;
     }
 
     .personagem img {
