@@ -6,6 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
 /* - - - - - GLOBALS - - - - - */
 
 * {
@@ -318,6 +320,17 @@ footer {
     width: 80vw;
 }
 
+.carta {
+    background-color: color-mix(in oklch, transparent, var(--Buff) 20%);
+    box-shadow: inset 0 0 20px var(--Buff);
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.carta p {
+    font-family: 'Handlee', cursive;
+    font-size: medium;
+}
 
 
 @media (min-width: 600px) {
